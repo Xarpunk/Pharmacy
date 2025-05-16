@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#537959">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Аптеки ДОНА - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="background-image"></div>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Аптеки ДОНА" class="logo-image">
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#">О КОМПАНИИ</a></li>
+                    <li><a href="#about">О НАШЕЙ АПТЕКЕ</a></li>
+                    <li><a href="#products">АССОРТИМЕНТ ТОВАРОВ</a></li>
+                    <li><a href="/articles">СТАТЬИ И СОВЕТЫ</a></li>
+                    <li><a href="#contact-form" onclick="scrollToContact(event)">СВЯЗЬ</a></li>
+                    <li><a href="#pharmacies" onclick="scrollToPharmacies(event)">АПТЕКИ В ГОРОДЕ</a></li>
+                    <li><a href="/contacts">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <div class="hero-logo">
+                        <img src="images/logo.png" alt="Аптеки ДОНА" class="hero-logo-image">
+                    </div>
+                    <p class="hero-description">
+                        Это централизованная фармацевтическая компания, объединяющая свыше 110 государственных аптек и аптечных пунктов в г. Ростова-на-Дону и Ростовской области
+                    </p>
+                    <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Посмотреть каталог</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="advantages">
+        <div class="advantages-list">
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="images/1.png" alt="Качество и ассортимент">
+                </div>
+                <span class="advantage-text">Качество и ассортимент</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="images/2.png" alt="Доступность и удобство">
+                </div>
+                <span class="advantage-text">Доступность и удобство</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="images/3.png" alt="Цены и акции">
+                </div>
+                <span class="advantage-text">Цены и акции</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="images/4.png" alt="Качество обслуживания">
+                </div>
+                <span class="advantage-text">Качество обслуживания</span>
+            </div>
+        </div>
+    </section>
+    <!-- About section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="images/woman.png" alt="Фармацевт в аптеке">
+        </div>
+        <div class="about-content">
+            <h2 class="about-title">
+                <span class="about-title-black">О нашей</span> 
+                <span class="about-title-green">аптеке</span>
+            </h2>
+            <p class="about-text">
+                Ваш лечащий врач выдал вам рецепт, но вы не можете разобраться, что же в нём написано? Провизоры Государственной аптеки Аптеки Дона готовы выручить вас! Они подберут лекарства, ориентируясь на назначение, а также ваши финансовые возможности. Если же нужных препаратов не окажется в наличии, вам сообщат, получится ли оформить на них заказ.
+            </p>
+        </div>
+    </section>
+    <!-- Products section -->
+    <section class="products" id="products">
+        <h2 class="products-title">Ассортимент товаров</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/paracetamol.png" alt="Парацетамол">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Парацетамол</h3>
+                    <p class="product-description">Обезболивающее и жаропонижающее средство. Блокирует синтез простагландинов в центральной нервной системе.</p>
+                    <p class="product-indications">Головная боль, зубная боль, мышечная боль, повышенная температура, симптомы простуды и гриппа</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/ibuprofen.png" alt="Ибупрофен">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Ибупрофен</h3>
+                    <p class="product-description">Нестероидный противовоспалительный препарат. Оказывает противовоспалительное, жаропонижающее и анальгезирующее действие.</p>
+                    <p class="product-indications">Воспалительные заболевания суставов, ревматические боли, мигрень, боли при травмах, лихорадочные состояния</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/omeprazol.png" alt="Омепразол">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Омепразол</h3>
+                    <p class="product-description">Антисекреторное противоязвенное средство. Применяется для лечения гастрита, язвенной болезни желудка.</p>
+                    <p class="product-indications">Язвенная болезнь желудка, гастроэзофагеальная рефлюксная болезнь, синдром Золлингера-Эллисона, эрозивный гастрит, профилактика язв при приеме НПВП</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/no-shpa.png" alt="Но-шпа">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Но-шпа</h3>
+                    <p class="product-description">Спазмолитическое средство. Снимает спазмы гладкой мускулатуры внутренних органов, уменьшает боль, вызванную спазмами.</p>
+                    <p class="product-indications">Спазмы желудочно-кишечного тракта, почечная колика, желчная колика, спазмы мочевыводящих путей, болезненные менструации</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/arbidol.png" alt="Арбидол">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Арбидол</h3>
+                    <p class="product-description">Противовирусный препарат с иммуномодулирующим действием. Эффективен против вирусов гриппа А и В.</p>
+                    <p class="product-indications">Профилактика и лечение гриппа А и В, лечение ОРВИ, комплексная терапия хронического бронхита, профилактика послеоперационных осложнений, укрепление иммунитета</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/losartan.png" alt="Лозартан">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Лозартан</h3>
+                    <p class="product-description">Антигипертензивное средство. Блокатор рецепторов ангиотензина II, снижает артериальное давление.</p>
+                    <p class="product-indications">Артериальная гипертензия, хроническая сердечная недостаточность, диабетическая нефропатия, снижение риска инсульта, защита почек при диабете 2 типа</p>
+                    <button class="product-button">ПОКАЗАНИЯ</button>
+                </div>
+            </div>
+        </div>
+        <a href="/catalog" class="view-all-button">ПОСМОТРЕТЬ ВЕСЬ АССОРТИМЕНТ</a>
+    </section>
+    <!-- Articles section -->
+    <section class="articles">
+        <h2 class="articles-title">Полезные статьи и советы</h2>
+        <div class="articles-grid">
+            <a href="https://dzen.ru/a/ZIMeIpUGVw-HH4nr" class="article-card">
+                <div class="article-image">
+                    <img src="images/article1.png" alt="Артрит">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Артрит<br>Что нужно знать?</h3>
+                </div>
+            </a>
+            <a href="https://dzen.ru/a/ZYh5JFwQi2jqyV01" class="article-card">
+                <div class="article-image">
+                    <img src="images/article3.png" alt="Диабет">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Диабет<br>Что нужно знать?</h3>
+                </div>
+            </a>
+            <a href="https://dzen.ru/a/ZUFocuRJDmb_S96l?sid=24906971342406662" class="article-card">
+                <div class="article-image">
+                    <img src="images/article4.png" alt="Гипертония">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Гипертония<br>Что нужно знать?</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Contact Form section -->
+    <section class="contact-form" id="contact-form">
+        <div class="form-container">
+            <h2 class="form-title">Онлайн-консультация</h2>
+            <form class="consultation-form">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="tel" placeholder="+7 (___) ___ __ __" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Я согласен(на) с <a href="#" onclick="openPrivacyModal(); return false;">политикой конфиденциальности</a> и даю согласие на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="submit-button">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </section>
+    <div class="modal" id="availability-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p class="modal-text">Узнать наличие товара вы можете, заполнив форму онлайн-консультации или посетив ближайшую аптеку "Аптеки Дона"</p>
+            <div class="modal-buttons">
+                <button class="modal-button consultation-btn" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">Заполнить форму</button>
+                <button class="modal-button locations-btn" onclick="document.getElementById('pharmacies').scrollIntoView({behavior: 'smooth', block: 'start'})">Найти аптеку</button>
+            </div>
+        </div>
+    </div>
+    <section class="pharmacies" id="pharmacies">
+        <h2 class="pharmacies-title">Аптеки в городе</h2>
+        <div class="pharmacies-grid">
+            <!-- Карточка 1 -->
+            <div class="pharmacy-card">
+                <div class="pharmacy-top">
+                    <img src="images/pharm.png" alt="Аптека" class="pharmacy-icon">
+                    <div class="pharmacy-name">Аптеки Дона Производственная аптека №340</div>
+                </div>
+                <div class="pharmacy-info">
+                    <div class="pharmacy-contact">8-863-222-33-47</div>
+                    <div class="pharmacy-contact">guprocra340@mail.ru</div>
+                </div>
+                <div class="pharmacy-bottom">
+                    <button class="pharmacy-btn" onclick="scrollToMap(1)">показать на карте</button>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="pharmacy-card">
+                <div class="pharmacy-top">
+                    <img src="images/pharm.png" alt="Аптека" class="pharmacy-icon">
+                    <div class="pharmacy-name">Аптеки Дона, Аптечный пункт №73</div>
+                </div>
+                <div class="pharmacy-info">
+                    <!-- Нет телефона и email -->
+                </div>
+                <div class="pharmacy-bottom">
+                    <button class="pharmacy-btn" onclick="scrollToMap(2)">показать на карте</button>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="pharmacy-card">
+                <div class="pharmacy-top">
+                    <img src="images/pharm.png" alt="Аптека" class="pharmacy-icon">
+                    <div class="pharmacy-name">Аптеки Дона, Аптека № 290</div>
+                </div>
+                <div class="pharmacy-info">
+                    <div class="pharmacy-contact">8-961-323-28-62</div>
+                    <div class="pharmacy-contact">rostovapteka290@mail.ru</div>
+                </div>
+                <div class="pharmacy-bottom">
+                    <button class="pharmacy-btn" onclick="scrollToMap(3)">показать на карте</button>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="pharmacy-card">
+                <div class="pharmacy-top">
+                    <img src="images/pharm.png" alt="Аптека" class="pharmacy-icon">
+                    <div class="pharmacy-name">Аптеки Дона, Аптека № 52</div>
+                </div>
+                <div class="pharmacy-info">
+                    <div class="pharmacy-contact">a52@aptekidona.ru</div>
+                </div>
+                <div class="pharmacy-bottom">
+                    <button class="pharmacy-btn" onclick="scrollToMap(4)">показать на карте</button>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="pharmacy-card">
+                <div class="pharmacy-top">
+                    <img src="images/pharm.png" alt="Аптека" class="pharmacy-icon">
+                    <div class="pharmacy-name">Аптеки Дона, Аптека № 53</div>
+                </div>
+                <div class="pharmacy-info">
+                    <div class="pharmacy-contact">8-863-232-93-40</div>
+                    <div class="pharmacy-contact">a53@aptekidona.ru</div>
+                </div>
+                <div class="pharmacy-bottom">
+                    <button class="pharmacy-btn" onclick="scrollToMap(5)">показать на карте</button>
+                </div>
+            </div>
+
+            <!-- Карточка-кнопка для поиска ближайшей аптеки -->
+            <div class="pharmacy-card pharmacy-nearest-btn" onclick="findAndShowNearestPharmacy()">
+                <div class="pharmacy-nearest-text">Найти ближайшую аптеку</div>
+            </div>
+        </div>
+    </section>
+    <!-- Секция с картой аптек -->
+    <section class="pharmacy-map-section" id="pharmacy-map">
+        <div class="pharmacy-map-container">
+            <div id="map" class="pharmacy-map"></div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <h2 class="contacts-title">Контакты</h2>
+        <div class="contacts-container">
+            <div class="contacts-info">
+                <div class="main-office">
+                    <h3 class="office-title">Центральный офис</h3>
+                    <div class="office-details">
+                        <p class="office-address">г. Ростов-на-Дону, ул. Варфоломеева, д. 55/104</p>
+                        <p class="office-phone"><a href="tel:+78632326429">+7 (863) 232-64-29</a></p>
+                        <p class="office-email"><a href="mailto:aptekidona@yandex.ru">aptekidona@yandex.ru</a></p>
+                    </div>
+                </div>
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <h4>Аптеки Дона аптека №340</h4>
+                        <p class="contact-phone"><a href="tel:+78632223347">8-863-222-33-47</a></p>
+                        <p class="contact-email"><a href="mailto:guprocra340@mail.ru">guprocra340@mail.ru</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>ГУПРО "Областная Фармация" Аптека №61 (Ростов-на-Дону)</h4>
+                        <p class="contact-address">г.Ростов-на-Дону, ул. Социалистическая,14</p>
+                        <p class="contact-phone"><a href="tel:+79897293534">+7 (989) 729-35-34</a></p>
+                        <p class="contact-email"><a href="mailto:a61@aptekidona.ru">a61@aptekidona.ru</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>ГУПРО "Областная Фармация" Аптека №6 (Ростов-на-Дону)</h4>
+                        <p class="contact-address">г. Ростов-на-Дону, ул. Варфоломеева, д. 6</p>
+                        <p class="contact-phone"><a href="tel:+78632526352">+7 (863) 252-63-52</a></p>
+                        <p class="contact-email"><a href="mailto:gos.apteka6@yandex.ru">gos.apteka6@yandex.ru</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="images/logo.png" alt="Аптеки ДОНА" class="footer-logo">
+                <div class="footer-contact">
+                    <p>г. Ростов-на-Дону,<br>ул. Варфоломеева, д. 55/104</p>
+                    <p><a href="tel:+78632326429">+7 (863) 232-64-29</a></p>
+                    <p><a href="mailto:aptekidona@yandex.ru">aptekidona@yandex.ru</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">О компании</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">О нашей аптеке</a></li>
+                    <li><a href="#products">Ассортимент товаров</a></li>
+                    <li><a href="/articles">Статьи и советы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Аптеки</h3>
+                <ul class="footer-links">
+                    <li><a href="#pharmacies">Аптеки в городе</a></li>
+                    <li><a href="#pharmacy-map">Карта аптек</a></li>
+                    <li><a href="#contact-form">Онлайн-консультация</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Информация</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="openPrivacyModal(); return false;">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Аптеки ДОНА. Все права защищены.</p>
+        </div>
+    </footer>
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacy-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
+            <h2 style="color: #217143; margin-bottom: 20px;">Политика конфиденциальности</h2>
+            <div class="privacy-content">
+                <p>Мы, Аптеки ДОНА, обязуемся сохранять вашу конфиденциальность при посещении нашего сайта. Эта политика конфиденциальности объясняет, как мы используем личную информацию, собранную на нашем сайте.</p>
+                <h3>1. Какую информацию мы собираем?</h3>
+                <p>Мы собираем информацию, которую вы предоставляете нам добровольно:</p>
+                <ul>
+                    <li>Имя</li>
+                    <li>Контактный телефон</li>
+                    <li>Email адрес</li>
+                </ul>
+                <h3>2. Как мы используем информацию?</h3>
+                <p>Собранная информация используется для:</p>
+                <ul>
+                    <li>Обработки ваших запросов</li>
+                    <li>Предоставления консультаций</li>
+                    <li>Информирования об акциях и специальных предложениях</li>
+                </ul>
+                <h3>3. Защита информации</h3>
+                <p>Мы принимаем необходимые меры для защиты ваших личных данных от несанкционированного доступа.</p>
+                <h3>4. Использование файлов cookie</h3>
+                <p>Наш сайт использует файлы cookie для улучшения пользовательского опыта.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+    <script>
+        // Глобальные переменные для доступа к карте и меткам
+        var myMap;
+        var placemarks = {};
+
+        // Функции для работы с модальным окном политики конфиденциальности
+        function openPrivacyModal() {
+            var modal = document.getElementById('privacy-modal');
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyModal() {
+            var modal = document.getElementById('privacy-modal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Закрытие модального окна при клике вне его содержимого
+        window.onclick = function(event) {
+            var modal = document.getElementById('privacy-modal');
+            if (event.target == modal) {
+                closePrivacyModal();
+            }
+        }
+
+        // Функция для плавной прокрутки к секции аптек
+        function scrollToPharmacies(e) {
+            e.preventDefault();
+            var section = document.getElementById('pharmacies');
+            if (section) {
+                var y = section.getBoundingClientRect().top + window.pageYOffset - 120;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }
+
+        // Функция для плавной прокрутки к форме связи с учетом хедера
+        function scrollToContact(e) {
+            e.preventDefault();
+            var form = document.getElementById('contact-form');
+            if (form) {
+                var y = form.getBoundingClientRect().top + window.pageYOffset - 180;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }
+
+        // Функция для прокрутки к карте и открытия метки
+        function scrollToMap(pharmacyId) {
+            var mapSection = document.getElementById('pharmacy-map');
+            if (mapSection) {
+                var y = mapSection.getBoundingClientRect().top + window.pageYOffset - 120;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+                setTimeout(function() {
+                    if (typeof placemarks !== 'undefined' && placemarks[pharmacyId]) {
+                        var coordinates = placemarks[pharmacyId].geometry.getCoordinates();
+                        myMap.setCenter(coordinates, 15);
+                        placemarks[pharmacyId].balloon.open();
+                    }
+                }, 700);
+            }
+        }
+
+        // Функция для поиска ближайшей аптеки
+        function findNearestPharmacy(userCoords) {
+            var nearest = null;
+            var minDistance = Infinity;
+
+            Object.keys(placemarks).forEach(function(id) {
+                var pharmacyCoords = placemarks[id].geometry.getCoordinates();
+                var distance = ymaps.coordSystem.geo.getDistance(userCoords, pharmacyCoords);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearest = id;
+                }
+            });
+
+            return nearest;
+        }
+
+        // Функция для поиска ближайшей аптеки и прокрутки к карте
+        function findAndShowNearestPharmacy() {
+            console.log('Клик по карточке "Найти ближайшую аптеку"');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var userCoords = [position.coords.latitude, position.coords.longitude];
+                    console.log('Координаты пользователя:', userCoords);
+                    var nearestId = findNearestPharmacy(userCoords);
+                    console.log('Найден id ближайшей аптеки:', nearestId);
+                    if (nearestId) {
+                        scrollToMap(nearestId);
+                        console.log('Вызвана scrollToMap с id:', nearestId);
+                    } else {
+                        alert('Ближайшая аптека не найдена.');
+                    }
+                }, function(error) {
+                    alert('Не удалось получить ваше местоположение.');
+                    console.error(error);
+                });
+            } else {
+                alert('Геолокация не поддерживается вашим браузером');
+            }
+        }
+
+        // Инициализация карты
+        ymaps.ready(function () {
+            myMap = new ymaps.Map('map', {
+                center: [47.2357, 39.7015], // Координаты центра Ростова-на-Дону
+                zoom: 12,
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+
+            // Массив аптек с координатами
+            var pharmacies = [
+                { 
+                    id: 1,
+                    name: 'Аптеки Дона Производственная аптека №340',
+                    address: 'г. Ростов-на-Дону, пр. Коммунистический, д. 53',
+                    coordinates: [47.207070, 39.615506]
+                },
+                { 
+                    id: 2,
+                    name: 'Аптеки Дона, Аптечный пункт №73',
+                    address: 'г.Ростов-на-Дону, ул. Ленина 46/2',
+                    coordinates: [47.250284, 39.707590]
+                },
+                { 
+                    id: 3,
+                    name: 'Аптеки Дона, Аптека № 290',
+                    address: 'г.Ростов-на-Дону, ул.Тружеников, д.16',
+                    coordinates: [47.211312, 39.644710]
+                },
+                { 
+                    id: 4,
+                    name: 'Аптеки Дона, Аптека № 52',
+                    address: 'г.Ростов-на-Дону, б.Комарова, д.13',
+                    coordinates: [47.288059, 39.713494]
+                },
+                { 
+                    id: 5,
+                    name: 'Аптеки Дона, Аптека № 53',
+                    address: 'г. Ростов-на-Дону, пр. Стачки, 41/1',
+                    coordinates: [47.210890, 39.667007]
+                }
+            ];
+
+            // Создаем кластеризатор
+            var clusterer = new ymaps.Clusterer({
+                preset: 'islands#redClusterIcons',
+                groupByCoordinates: false,
+                clusterDisableClickZoom: true,
+                clusterHideIconOnBalloonOpen: false,
+                geoObjectHideIconOnBalloonOpen: false
+            });
+
+            // Функция для создания метки
+            function createPlacemark(pharmacy) {
+                var placemark = new ymaps.Placemark(pharmacy.coordinates, {
+                    balloonContent: `
+                        <strong>${pharmacy.name}</strong><br>
+                        ${pharmacy.address}
+                    `
+                }, {
+                    preset: 'islands#redDotIcon',
+                    balloonCloseButton: false
+                });
+
+                return placemark;
+            }
+
+            // Инициализация меток
+            pharmacies.forEach(function(pharmacy) {
+                var placemark = createPlacemark(pharmacy);
+                placemarks[pharmacy.id] = placemark;
+                clusterer.add(placemark);
+            });
+
+            // Добавляем кластеризатор на карту
+            myMap.geoObjects.add(clusterer);
+
+            // Устанавливаем границы карты
+            myMap.setBounds(clusterer.getBounds(), {
+                checkZoomRange: true
+            });
+        });
+    </script>
+</body>
+</html> 
